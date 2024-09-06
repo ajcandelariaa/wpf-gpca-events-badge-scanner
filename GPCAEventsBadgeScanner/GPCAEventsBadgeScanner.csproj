@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Assets\Images\Common\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Fonts\Arial\arial.ttf" />
+    <None Remove="Assets\Fonts\Arial\arialbd.ttf" />
+    <None Remove="Assets\Fonts\Arial\arialbi.ttf" />
+    <None Remove="Assets\Fonts\Arial\ariali.ttf" />
+    <None Remove="Assets\Fonts\Montserrat\Montserrat-Regular.ttf" />
+    <None Remove="Assets\Images\Banners\img_2024_anc.jpg" />
+    <None Remove="Assets\Images\Common\favicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\Images\Common\favicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Fonts\Arial\arial.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Arial\arialbd.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Arial\arialbi.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Arial\ariali.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Montserrat\Montserrat-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Images\Banners\img_2024_anc.jpg" />
+  </ItemGroup>
+
+</Project>

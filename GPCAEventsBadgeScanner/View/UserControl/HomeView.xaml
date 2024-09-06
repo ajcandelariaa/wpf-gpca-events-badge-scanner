@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="GPCAEventsBadgeScanner.View.UserControl.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GPCAEventsBadgeScanner.View.UserControl"
+             mc:Ignorable="d" 
+             Loaded="Window_Loaded"
+             d:DesignHeight="450" d:DesignWidth="1366">
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
+        <Grid Background="#FFFFFF">
+            <Border Grid.Row="1" Background="#f2f2f2" CornerRadius="20">
+                <Grid Margin="20 5 20 20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="9*"/>
+                    </Grid.RowDefinitions>
+
+                    <Border Background="#f2f2f2" 
+                            BorderBrush="#d9d9d9" 
+                            BorderThickness="1" 
+                            CornerRadius="12" 
+                            Margin="0 0 0 10"
+                            Width="auto"
+                            Cursor="Hand">
+                        <PasswordBox Name="Tb_scanned_code" 
+                                     PreviewKeyDown="PasswordBox_PreviewKeyDown" 
+                                     FontSize="24" 
+                                     Padding="5" 
+                                     Background="#f2f2f2" 
+                                     BorderThickness="0" 
+                                     VerticalAlignment="Center"
+                                     HorizontalAlignment="Stretch"
+                                     Margin="5"
+                                     HorizontalContentAlignment="Center"
+                                     VerticalContentAlignment="Center" />
+                    </Border>
+
+
+                    <Border  Grid.Row="1" Background="#e8e8e8" CornerRadius="10" Padding="10" >
+                        <StackPanel>
+                            <Border Background="#f2f2f3" CornerRadius="10" Padding="10">
+                                <Grid Margin="10 0 10 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Name:" FontSize="16" FontWeight="Bold" />
+                                    <TextBlock Grid.Column="1" Text="{Binding CurrentAttendee.FullName}" FontSize="16" TextWrapping="Wrap"/>
+                                </Grid>
+                            </Border>
+
+                            <Border Background="#f2f2f3" CornerRadius="10" Padding="10" Margin="0 10 0 0">
+                                <Grid Margin="10 0 10 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Job Title:" FontSize="16" FontWeight="Bold" />
+                                    <TextBlock Grid.Column="1" Text="{Binding CurrentAttendee.JobTitle}" FontSize="16" TextWrapping="Wrap"/>
+                                </Grid>
+                            </Border>
+
+                            <Border Background="#f2f2f3" CornerRadius="10" Padding="10" Margin="0 10 0 0">
+                                <Grid Margin="10 0 10 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Company Name:" FontSize="16" FontWeight="Bold" />
+                                    <TextBlock Grid.Column="1" Text="{Binding CurrentAttendee.CompanyName}" FontSize="16" TextWrapping="Wrap"/>
+                                </Grid>
+                            </Border>
+
+                            <Border Background="#f2f2f3" CornerRadius="10" Padding="10" Margin="0 10 0 0">
+                                <Grid Margin="10 0 10 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Badge Type:" FontSize="16" FontWeight="Bold" />
+                                    <TextBlock Grid.Column="1" Text="{Binding CurrentAttendee.BadgeType}" FontSize="16" TextWrapping="Wrap"/>
+                                </Grid>
+                            </Border>
+
+                            <Border Background="#f2f2f3" CornerRadius="10" Padding="10" Margin="0 10 0 0">
+                                <Grid Margin="10 0 10 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Transaction ID:" FontSize="16" FontWeight="Bold" />
+                                    <TextBlock Grid.Column="1" Text="{Binding CurrentAttendee.TransactionId}" FontSize="16" TextWrapping="Wrap"/>
+                                </Grid>
+                            </Border>
+
+                            <Border Background="#f2f2f3" CornerRadius="10" Padding="10" Margin="0 10 0 0">
+                                <Grid Margin="10 0 10 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Access Type:" FontSize="16" FontWeight="Bold" />
+                                    <TextBlock Grid.Column="1" Text="{Binding CurrentAttendee.AccessType}" FontSize="16" TextWrapping="Wrap"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </ScrollViewer>
+</UserControl>
