@@ -57,8 +57,9 @@ namespace GPCAEventsBadgeScanner.View.UserControl
                                     string delegateId = arrayDecryptedText[3];
                                     string delegateType = arrayDecryptedText[4];
                                     string apiCode = ConfigurationManager.AppSettings["ApiCode"];
+                                    string location = ConfigurationManager.AppSettings["Location"];
 
-                                    _mainViewModel.AttendeeViewModel.ScannedAttendee(apiCode, delegateId, delegateType);
+                                    _mainViewModel.AttendeeViewModel.ScannedAttendee(apiCode, delegateId, delegateType, location);
 
                                 }
                                 else

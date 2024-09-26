@@ -1,5 +1,6 @@
 ﻿using GPCAEventsBadgeScanner.Model;
 using GPCAEventsBadgeScanner.View.UserControl;
+using System.Configuration;
 using System.Windows.Controls;
 
 namespace GPCAEventsBadgeScanner.ViewModel
@@ -10,6 +11,7 @@ namespace GPCAEventsBadgeScanner.ViewModel
         private AttendeeModel _currentAttendee;
         private string _backDropStatus = "Collapsed";
         private string _loadingProgressStatus = "Collapsed";
+        private string _currentLocation;
         private UserControl _currentView;
 
         public string EventBanner 
@@ -17,6 +19,16 @@ namespace GPCAEventsBadgeScanner.ViewModel
             get
             {
                 return EventModel.EventBanner;
+            }
+        }
+
+        public string CurrentLocation
+        {
+            get { return _currentLocation; }
+            set
+            {
+                _currentLocation = value;
+                OnPropertyChanged(nameof(CurrentLocation));
             }
         }
 
@@ -73,10 +85,25 @@ namespace GPCAEventsBadgeScanner.ViewModel
             }
         }
 
+        public void NavigateToHomeView()
+        {
+            CurrentView = new HomeView(this);
+        }
+
         public MainViewModel()
         {
             AttendeeViewModel = new AttendeeViewModel(this);
-            CurrentView = new HomeView(this);
+
+            string location = ConfigurationManager.AppSettings["Location"];
+
+            if (string.IsNullOrEmpty(location))
+            {
+                CurrentView = new InitialSetupView(this);
+            } else
+            {
+                CurrentView = new HomeView(this);
+                CurrentLocation = "Location: " + location;
+            }
         }
     }
 }

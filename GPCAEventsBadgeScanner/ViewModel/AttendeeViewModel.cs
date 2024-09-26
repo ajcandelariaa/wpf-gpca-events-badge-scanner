@@ -1,9 +1,6 @@
 ﻿using GPCAEventsBadgeScanner.Helper;
 using GPCAEventsBadgeScanner.Model;
 using Newtonsoft.Json;
-using System;
-using System.Collections.ObjectModel;
-using System.Configuration;
 using System.Net.Http;
 using System.Text;
 using System.Windows;
@@ -21,7 +18,7 @@ namespace GPCAEventsBadgeScanner.ViewModel
             _mainViewModel = mainViewModel;
         }
 
-        public async Task ScannedAttendee(string code, string delegateId, string delegateType)
+        public async Task ScannedAttendee(string code, string delegateId, string delegateType, string location)
         {
             try
             {
@@ -30,6 +27,7 @@ namespace GPCAEventsBadgeScanner.ViewModel
                     {"code", code},
                     {"delegateId", delegateId.ToString()},
                     {"delegateType", delegateType},
+                    {"location", location},
                 };
 
                     var jsonData = JsonConvert.SerializeObject(passData);
@@ -47,7 +45,6 @@ namespace GPCAEventsBadgeScanner.ViewModel
                     _mainViewModel.LoadingProgressStatus = "Collapsed";
                     MessageBox.Show($"Server error. Status code: {response.StatusCode}");
                 }
-                
             }
             catch (Exception ex)
             {

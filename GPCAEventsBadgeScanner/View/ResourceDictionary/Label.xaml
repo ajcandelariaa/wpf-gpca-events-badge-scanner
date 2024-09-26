@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="Label">
+        <Setter Property="FontFamily" Value="/GPCAEventsBadgeScanner;component/Assets/Fonts/Montserrat/Montserrat-Regular.ttf#Montserrat" />
+    </Style>
+</ResourceDictionary>

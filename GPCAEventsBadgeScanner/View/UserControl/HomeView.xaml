@@ -21,9 +21,13 @@
                             BorderThickness="1" 
                             CornerRadius="12" 
                             Margin="0 0 0 10"
-                            Width="auto"
-                            Cursor="Hand">
-                        <PasswordBox Name="Tb_scanned_code" 
+                            Width="auto">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <PasswordBox Name="Tb_scanned_code" 
                                      PreviewKeyDown="PasswordBox_PreviewKeyDown" 
                                      FontSize="24" 
                                      Padding="5" 
@@ -34,6 +38,8 @@
                                      Margin="5"
                                      HorizontalContentAlignment="Center"
                                      VerticalContentAlignment="Center" />
+                            <TextBlock Grid.Column="1" Text="{Binding CurrentLocation}" FontSize="22" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0" />
+                        </Grid>
                     </Border>
 
 

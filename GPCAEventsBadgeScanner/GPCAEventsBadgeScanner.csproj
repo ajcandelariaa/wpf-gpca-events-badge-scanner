@@ -10,12 +10,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\Fonts\Arial\arial.ttf" />
-    <None Remove="Assets\Fonts\Arial\arialbd.ttf" />
-    <None Remove="Assets\Fonts\Arial\arialbi.ttf" />
-    <None Remove="Assets\Fonts\Arial\ariali.ttf" />
     <None Remove="Assets\Fonts\Montserrat\Montserrat-Regular.ttf" />
     <None Remove="Assets\Images\Banners\img_2024_anc.jpg" />
+    <None Remove="Assets\Images\Banners\img_2024_psc.jpg" />
     <None Remove="Assets\Images\Common\favicon.ico" />
   </ItemGroup>
 
@@ -24,11 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Assets\Fonts\Arial\arial.ttf" />
-    <EmbeddedResource Include="Assets\Fonts\Arial\arialbd.ttf" />
-    <EmbeddedResource Include="Assets\Fonts\Arial\arialbi.ttf" />
-    <EmbeddedResource Include="Assets\Fonts\Arial\ariali.ttf" />
-    <EmbeddedResource Include="Assets\Fonts\Montserrat\Montserrat-Regular.ttf" />
+    <Resource Include="Assets\Fonts\Montserrat\Montserrat-Regular.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +30,7 @@
 
   <ItemGroup>
     <Resource Include="Assets\Images\Banners\img_2024_anc.jpg" />
+    <Resource Include="Assets\Images\Banners\img_2024_psc.jpg" />
   </ItemGroup>
 
 </Project>
