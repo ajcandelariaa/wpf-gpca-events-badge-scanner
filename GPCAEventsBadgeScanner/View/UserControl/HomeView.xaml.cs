@@ -39,7 +39,7 @@ namespace GPCAEventsBadgeScanner.View.UserControl
 
                     if (firstFourContent != "gpca")
                     {
-                        MessageBox.Show("Invalid QR Code. Please try again!");
+                        //MessageBox.Show("Invalid QR Code. Please try again!");
                     }
                     else
                     {
@@ -64,23 +64,23 @@ namespace GPCAEventsBadgeScanner.View.UserControl
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Invalid QR Code. Please try again!");
+                                    //MessageBox.Show("Invalid QR Code. Please try again!");
                                 }
                             }
                             else
                             {
-                                MessageBox.Show("Invalid QR Code. Please try again!");
+                                //MessageBox.Show("Invalid QR Code. Please try again!");
                             }
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Invalid QR Code. Please try again!");
+                            //MessageBox.Show("Invalid QR Code. Please try again!");
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid QR Code. Please try again!");
+                    //MessageBox.Show("Invalid QR Code. Please try again!");
                 }
 
                 _mainViewModel.LoadingProgressStatus = "Collapsed";
@@ -101,7 +101,7 @@ namespace GPCAEventsBadgeScanner.View.UserControl
             }
             catch (Exception ex)
             {
-                MessageBox.Show("QR Invalid" + ex);
+                //MessageBox.Show("QR Invalid" + ex);
                 return null;
             }
         }

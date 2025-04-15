@@ -43,13 +43,13 @@ namespace GPCAEventsBadgeScanner.ViewModel
                 else
                 {
                     _mainViewModel.LoadingProgressStatus = "Collapsed";
-                    MessageBox.Show($"Server error. Status code: {response.StatusCode}");
+                    //MessageBox.Show($"Server error. Status code: {response.StatusCode}");
                 }
             }
             catch (Exception ex)
             {
                 _mainViewModel.LoadingProgressStatus = "Collapsed";
-                MessageBox.Show($"Error scanning badge: {ex.Message}");
+                //MessageBox.Show($"Error scanning badge: {ex.Message}");
             }
         }
 
