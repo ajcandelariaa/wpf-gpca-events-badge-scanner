@@ -15,6 +15,7 @@
     <None Remove="Assets\Images\Banners\img_2024_anc.jpg" />
     <None Remove="Assets\Images\Banners\img_2024_psc.jpg" />
     <None Remove="Assets\Images\Banners\img_2025_pc.jpg" />
+    <None Remove="Assets\Images\Banners\img_2025_scc.jpg" />
     <None Remove="Assets\Images\Common\favicon.ico" />
   </ItemGroup>
 
@@ -35,6 +36,7 @@
     <Resource Include="Assets\Images\Banners\img_2024_anc.jpg" />
     <Resource Include="Assets\Images\Banners\img_2024_psc.jpg" />
     <Resource Include="Assets\Images\Banners\img_2025_pc.jpg" />
+    <Resource Include="Assets\Images\Banners\img_2025_scc.jpg" />
   </ItemGroup>
 
 </Project>
