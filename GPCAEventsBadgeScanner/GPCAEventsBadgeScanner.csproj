@@ -14,6 +14,7 @@
     <None Remove="Assets\Images\Banners\img_2024_af.jpg" />
     <None Remove="Assets\Images\Banners\img_2024_anc.jpg" />
     <None Remove="Assets\Images\Banners\img_2024_psc.jpg" />
+    <None Remove="Assets\Images\Banners\img_2025_af.jpg" />
     <None Remove="Assets\Images\Banners\img_2025_anc.jpg" />
     <None Remove="Assets\Images\Banners\img_2025_pc.jpg" />
     <None Remove="Assets\Images\Banners\img_2025_rcc.jpg" />
@@ -37,6 +38,7 @@
     <Resource Include="Assets\Images\Banners\img_2024_af.jpg" />
     <Resource Include="Assets\Images\Banners\img_2024_anc.jpg" />
     <Resource Include="Assets\Images\Banners\img_2024_psc.jpg" />
+    <Resource Include="Assets\Images\Banners\img_2025_af.jpg" />
     <Resource Include="Assets\Images\Banners\img_2025_anc.jpg" />
     <Resource Include="Assets\Images\Banners\img_2025_pc.jpg" />
     <Resource Include="Assets\Images\Banners\img_2025_rcc.jpg" />
